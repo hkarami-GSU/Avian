@@ -17,7 +17,7 @@ tdata = (1:43)';
 wbird = readmatrix('wbird.xlsx');
 
 DataI = wbird(:,2);
-DataC = cumsum(DataI)/weight;
+DataC = cumsum(DataI);
 Data = [DataI;DataC];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 m=3;
