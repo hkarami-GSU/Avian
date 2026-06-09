@@ -4,7 +4,7 @@ warning('off', 'all')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Configuration parameters
-m_beta = 3; % Number of Legendre polynomials for each beta_i(t)
+m_beta = 10; % Number of Legendre polynomials for each beta_i(t)
 noise_level_incidence = 0.05;    % 5% noise
 noise_level_cumulative = 0.05;   % 5% noise
 t0 = 5*pi/6;
@@ -119,10 +119,11 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initial guesses and bounds
-beta1_0 = [2.5e-4; 3e-5; -2e-4];
-beta2_0 = [2.5e-4; 3e-5; -2e-4];
-beta3_0 = [2.5e-4; 3e-5; -2e-4];
-alpha0 =  [2e-8; 0; 2e-3;5e-6 ; 5e-2; 0.01];
+beta1_0 = [2.5e-4; 3e-5; -2e-4; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0];
+beta2_0 = [2.5e-4; 3e-5; -2e-4; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0];
+beta3_0 = [2.5e-4; 3e-5; -2e-4; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0];
+
+alpha0 = [3e-5; 4e-5; 1e-4; 1e-4; 1e-4; 5e-4];
 
 theta0 = [beta1_0; beta2_0; beta3_0; alpha0];
 
