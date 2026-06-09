@@ -4,7 +4,7 @@ warning('off', 'all')
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Configuration parameters
-m_beta = 4; % Number of Legendre polynomials for each beta_i(t)
+m_beta = 10; % Number of Legendre polynomials for each beta_i(t)
 noise_level_incidence = 0.05;    % 5% noise
 noise_level_cumulative = 0.05;   % 5% noise
 t0 = 5*pi/6;
@@ -119,10 +119,10 @@ end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initial guesses and bounds
-beta1_0 = [1e-4; 0; 0; 0];
-beta2_0 = [1e-4; 0; 0; 0];
-beta3_0 = [1e-4; 0; 0; 0];
-alpha0 =  [0.04; 0.1; 0.01; 1e-5; 1e-5; 0.5];
+beta1_0 = [0.0001, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+beta2_0 = [0.0001, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+beta3_0 = [0.0001, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+alpha0 = [0.05, 0.01, 0.02, 0.02, 0.01, 0.5];
 
 theta0 = [beta1_0; beta2_0; beta3_0; alpha0];
 
